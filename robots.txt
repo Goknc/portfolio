@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://gokhancavdar.com/sitemap.xml
+Sitemap: https://gokhancavdar.vercel.app/sitemap.xml
