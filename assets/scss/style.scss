@@ -1,0 +1,60 @@
+/* ---------------------------------
+Template Name: Niko - Personal Portfolio/CV/Resume HTML Template
+Author: winzfy
+Author URL: https://themeforest.net/user/winzfy
+Version: 1.0
+
+-----------------------------------------------------------------------------------
+
+CSS INDEX
+=================== 
+01. CUSTOM PROPERTIES
+02. GLOBAL
+03. COMPONENTS
+04. Typography
+
+---- SECTIONS ----
+05. HEADER
+06. BANNER
+07. ABOUT
+08. SERVICES
+09. EXPERIENCE
+10. PORTFOLIO
+11. TESTIMONIAL
+12. PRICING
+13. CTA
+14. BLOG
+15. CONTACT
+16. FOOTER
+
+---- INNER PAGES ----
+17. SERVICE DETAILS
+18. PORTFOLIO DETAILS
+19. BLOG DETAILS
+
+******************************************************* 
+*************************************************************** */
+
+@import "main/variable";
+@import "main/breakpoints";
+@import "main/global";
+@import "main/components";
+@import "main/typography";
+
+@import "sections/header";
+@import "sections/banner";
+@import "sections/about";
+@import "sections/services";
+@import "sections/experience";
+@import "sections/portfolio";
+@import "sections/testimonial";
+@import "sections/pricing";
+@import "sections/cta";
+@import "sections/blog";
+@import "sections/contact";
+@import "sections/footer";
+
+// inner pages
+@import "pages/service-details";
+@import "pages/portfolio-details";
+@import "pages/blog-details";

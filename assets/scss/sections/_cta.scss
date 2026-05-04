@@ -1,0 +1,331 @@
+/* ----- CTA ----- */
+.nk-cta {
+    @include xl {
+        padding-top: 80px;
+    }
+
+    @include md {
+        padding-top: 60px;
+    }
+
+    &__heading {
+        text-align: left;
+        width: 100%;
+        margin-bottom: 23px;
+
+        @include xxs {
+            margin-bottom: 18px;
+        }
+
+        .nk-section__sub-title {
+            padding-left: 85px;
+
+            @include xxs {
+                padding-left: 65px;
+            }
+
+            &::before {
+                left: 0;
+
+            }
+
+            &::after {
+                content: none;
+            }
+        }
+    }
+
+    &-top {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+
+        .hand {
+            position: absolute;
+            // right: -344px;
+            bottom: -164px;
+            width: 295px;
+            right: 109%;
+            width: 46.4%;
+            pointer-events: none;
+            z-index: 1;
+            transform-origin: 0 110%;
+            animation: handMove 3.5s ease alternate infinite;
+
+            @include xxl {
+                bottom: -94px;
+                right: 104%;
+                width: 175px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: #e3e3e3;
+                // width: 50px;
+                // height: 50px;
+                border-radius: 50%;
+                right: 0;
+                top: 0;
+                transform: translate(50%, -50%);
+                z-index: -2;
+                animation: handTouch 1.5s ease forwards infinite;
+                mix-blend-mode: difference;
+            }
+        }
+
+        &__txt {
+            position: relative;
+            margin-bottom: 130px;
+
+            @include xl {
+                margin-bottom: 80px;
+            }
+
+            @include lg {
+                margin-bottom: 60px;
+            }
+
+            @include xxs {
+                margin-bottom: 20px;
+            }
+
+            .nk-about-txt__descr {
+                margin-bottom: 37px;
+
+                @include lg {
+                    margin-bottom: 22px;
+                }
+            }
+        }
+
+        &__actions {
+            @include xxs {
+                gap: 15px;
+                flex-direction: row;
+            }
+        }
+
+        &__achievement {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            @include xxs {
+                gap: 15px;
+            }
+
+            .title {
+                color: var(--purple);
+                margin-bottom: 0;
+            }
+        }
+
+        &__img {
+            position: relative;
+            width: max-content;
+            max-width: 100%;
+            z-index: 1;
+
+            @include md {
+                width: 500px;
+                margin: auto;
+            }
+
+            @include sm {
+                width: 400px;
+            }
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                background: url(../img/cta-vector-stroke.png) no-repeat center center;
+                background-size: 100% 100%;
+                // width: 730px;
+                // height: 400px;
+                width: 115%;
+                height: 75%;
+                z-index: -1;
+                rotate: 9deg;
+                transform: scaleX(-1);
+                left: 52px;
+                top: 90px;
+
+                @include xl {
+                    width: 110%;
+                    height: 80%;
+                }
+            }
+
+            &::after {
+                background-image: url(../img/cta-vector.png);
+                width: 110px;
+                height: 110px;
+                left: auto;
+                right: 0px;
+                top: 130px;
+                animation: cta_spin 3.5s linear infinite;
+
+                @include lg {
+                    width: 90px;
+                    height: 90px;
+                    top: 120px;
+                }
+
+                @include sm {
+                    top: 100px;
+                }
+
+                @include xxs {
+                    top: 70px;
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+        }
+    }
+
+    &-bottom {
+        background: url(../img/cta-bg.png) var(--purple) repeat-x center center;
+        background-size: cover;
+        padding: 60px 0;
+        transition: 0.8s;
+        animation: bgMoveX 50s linear forwards infinite;
+
+        @include lg {
+            padding: 40px 0;
+        }
+
+        @include xs {
+            padding: 30px 0;
+        }
+
+        .nk-section__title {
+            color: var(--white-f);
+        }
+    }
+}
+
+.nk-nwsltr-form {
+    border-radius: 10px;
+    background-color: rgb(101, 82, 193);
+    padding: 10px;
+    display: flex;
+
+    @include md {
+        padding: 6px;
+    }
+
+    @include xxs {
+        flex-direction: column;
+        row-gap: 5px;
+    }
+
+    input {
+        width: 100%;
+        color: var(--white-f);
+        padding: 0 30px 0 20px;
+
+        @include xxs {
+            height: 40px;
+            padding: 0 10px;
+        }
+
+        &:-webkit-autofill {
+
+            &-previewed,
+            &:focus,
+            &:hover {
+                background-color: red !important;
+            }
+        }
+
+        &::placeholder {
+            color: rgb(255 255 255 / 65%);
+        }
+    }
+
+    .nk-def-btn {
+        flex-shrink: 0;
+        background-color: transparent;
+        color: var(--black);
+        border-radius: 7px;
+        height: 55px;
+        line-height: normal;
+        border-color: var(--golden);
+
+        @include xl {
+            padding: 0 25px;
+        }
+
+        @include lg {
+            height: 50px;
+        }
+
+        @include md {
+            height: 45px;
+            border-radius: 5px;
+        }
+
+        &:hover {
+            transform: translateY(0);
+            color: var(--white-f);
+        }
+
+        &::before {
+            background-color: var(--golden);
+        }
+
+        i {
+            padding-left: 5px;
+        }
+
+    }
+}
+
+@keyframes handMove {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(16deg);
+    }
+}
+
+@keyframes handTouch {
+
+    0%,
+    50% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+
+    100% {
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+    }
+}
+
+@keyframes bgMoveX {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: 1920px;
+    }
+}
+
+@keyframes cta_spin {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

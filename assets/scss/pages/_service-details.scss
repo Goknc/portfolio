@@ -1,0 +1,364 @@
+/* ----- SERVICE DETAILS ----- */
+.nk-service-details {
+    &-sidebar {
+        @include md {
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+        }
+
+        @include sm {
+            flex-direction: column;
+            align-items: stretch;
+            row-gap: 0;
+        }
+
+        >* {
+            flex: 50%;
+
+            @include sm {
+                flex: auto;
+                width: 70%;
+                margin-inline: auto;
+            }
+
+            @include xxs {
+                width: 100%;
+            }
+        }
+    }
+
+    &-widget {
+        background-color: var(--white-f);
+        border-radius: 15px;
+        padding: 35px;
+
+        @include xl {
+            padding: 30px;
+        }
+
+        @include lg {
+            padding: 20px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 35px;
+
+            @include lg {
+                margin-bottom: 25px;
+            }
+        }
+
+        &__title {
+            font-size: 30px;
+            color: rgb(18, 18, 18);
+            line-height: 0.7;
+            margin-bottom: 35px;
+
+            @include xl {
+                margin-bottom: 30px;
+            }
+
+            @include lg {
+                font-size: 26px;
+                margin-bottom: 25px;
+            }
+        }
+
+        .service-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            a {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: var(--purple);
+                color: var(--white-f);
+                padding: 13px 30px;
+                border-radius: 10px;
+                font-size: 20px;
+                line-height: 1.7;
+                font-weight: 400;
+
+                @include xl {
+                    padding: 10px 25px;
+                }
+
+                @include lg {
+                    padding: 8px 20px;
+                    font-size: 18px;
+                }
+
+                &:hover {
+                    background-color: var(--golden);
+                    color: var(--black);
+                }
+
+                &.current {
+                    background-color: var(--golden);
+                    color: var(--black);
+
+                    &:hover {
+                        background-color: var(--purple);
+                        color: var(--white-f);
+                    }
+                }
+            }
+        }
+    }
+
+    &__cover-img {
+        border-radius: 15px;
+        overflow: hidden;
+        margin-bottom: 48px;
+
+        @include xl {
+            margin-bottom: 38px;
+        }
+
+        @include lg {
+            margin-bottom: 28px;
+        }
+
+        @include sm {
+            margin-bottom: 23px;
+        }
+
+        @include xs {
+            margin-bottom: 18px;
+        }
+
+        @include xxs {
+            margin-bottom: 13px;
+        }
+
+        img {
+            width: 100%;
+            height: 560px;
+
+            @include xl {
+                height: 470px;
+            }
+
+            @include lg {
+                height: 390px;
+            }
+
+            @include sm {
+                height: 330px;
+            }
+
+            @include xs {
+                height: 290px;
+            }
+
+            @include xxs {
+                height: 190px;
+            }
+        }
+    }
+
+    &__cta {
+        display: grid;
+        place-content: center;
+        background-image: url(../img/blog-3.jpg);
+        padding: 110px 10px;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background-color: rgb(0, 0, 0, 0.6);
+        }
+
+        a {
+            border-color: var(--golden);
+            color: var(--black);
+            background: transparent;
+            box-shadow: 0px 9px 12px rgba(252, 217, 102, 0.3);
+
+            &:hover {
+                box-shadow: 0px 9px 12px rgba(252, 217, 102, 0.3);
+                color: var(--white-f);
+            }
+
+            &::before {
+                background-color: var(--golden);
+            }
+        }
+    }
+
+    &__title {
+        color: var(--black);
+        line-height: 1.278;
+        margin-bottom: 22px;
+
+        @include xl {
+            font-size: 34px;
+        }
+
+        @include lg {
+            font-size: 30px;
+        }
+
+        @include sm {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        @include xs {
+            font-size: 25px;
+        }
+
+        @include xxs {
+            font-size: 22px;
+        }
+    }
+
+    &__descr {
+        font-size: 16px;
+        color: #555555;
+        line-height: 1.625;
+        margin-bottom: 25px;
+
+        @include sm {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__inner-img {
+        border-radius: 15px;
+        overflow: hidden;
+        margin-top: 58px;
+        margin-bottom: 48px;
+
+        @include xl {
+            margin-top: 48px;
+            margin-bottom: 38px;
+        }
+
+        @include lg {
+            margin-top: 38px;
+            margin-bottom: 28px;
+        }
+
+        @include sm {
+            margin-top: 33px;
+            margin-bottom: 23px;
+        }
+
+        @include xs {
+            margin-top: 28px;
+            margin-bottom: 18px;
+        }
+
+        img {
+            max-height: 400px;
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}
+
+.nk-single-accordion-item {
+    border-radius: 8px;
+    background-color: var(--purple);
+    color: var(--white-f);
+    padding: 0 25px;
+    transition: 0.4s ease;
+
+    @include sm {
+        padding: 0 20px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 25px;
+
+        @include sm {
+            margin-bottom: 15px;
+        }
+    }
+
+    &.open {
+        background-color: var(--white-f);
+        color: var(--black);
+
+        .nk-single-accordion-item {
+            &__header {
+                border-color: rgb(18, 18, 18, 0.1);
+
+                i {
+                    transform: scale(-1);
+                }
+            }
+
+            &__body {
+                padding: 17px 0 23px;
+                grid-template-rows: 1fr;
+
+                @include md {
+                    padding: 13px 0 18px;
+                }
+
+                @include sm {
+                    padding: 8px 0 13px;
+                }
+            }
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+        cursor: pointer;
+        border-bottom: 1px solid transparent;
+
+        @include md {
+            padding: 15px 0;
+        }
+
+        @include sm {
+            padding: 10px 0;
+        }
+
+        i {
+            transition: transform 0.4s ease;
+        }
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.5;
+        margin-bottom: 0;
+
+        @include sm {
+            font-size: 18px;
+        }
+    }
+
+    &__body {
+        transition: all 0.4s ease;
+        display: grid;
+        grid-template-rows: 0fr;
+        overflow: hidden;
+
+        p {
+            overflow: hidden;
+            margin-bottom: 0;
+            font-size: 16px;
+            color: rgb(85, 85, 85);
+            line-height: 1.625;
+            text-transform: capitalize;
+        }
+    }
+}

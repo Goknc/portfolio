@@ -1,0 +1,522 @@
+@import "../scss/main/breakpoints";
+
+body.dark-mode {
+    background: #212735;
+    color: var(--white-f);
+
+    .nk-def-btn {
+        background-color: #32257b87;
+        color: var(--white-f);
+    }
+
+    .nk-section__title {
+        color: var(--white-f);
+    }
+
+    .nk-header {
+        border: 1px solid rgb(255 255 255 / 15%);
+    }
+
+    .nk-header-offcanvas {
+        @include md {
+            background-color: #212735;
+        }
+    }
+
+    .nk-header-offcanvas::before {
+        border-inline: 1px solid rgb(255 255 255 / 15%);
+    }
+
+    .nk-header__nav>ul a {
+        color: var(--white-f);
+
+        &:hover {
+            color: var(--purple);
+        }
+    }
+
+    .nk-header .sub-menu {
+        background-color: #32394c;
+        border-color: rgb(255 255 255 / 15%);
+    }
+
+    .to-be-fixed.fixed {
+        background-color: #32394c;
+    }
+
+    // banner section
+    .nk-banner::before {
+        background-image: url(../img/banner-bg-dark.png);
+    }
+
+    .nk-banner__title::before {
+        background-image: url(../img/banner-arrow-light.png);
+    }
+
+    .nk-banner__link {
+        background-color: #3e455f;
+        color: var(--white-f);
+
+        &:hover {
+            color: var(--golden);
+        }
+    }
+
+    .nk-banner .ticker {
+        background-color: #2d3446;
+    }
+
+    .nk-banner .ticker-2 {
+        background-color: var(--black);
+    }
+
+    // about section
+    .nk-about {
+        background-color: #32394c;
+    }
+
+    .nk-about-txt__title {
+        color: var(--white-f);
+    }
+
+    .nk-about-txt__descr {
+        color: rgb(209 209 209);
+    }
+
+    .nk-socials a {
+        color: var(--white-f);
+    }
+
+    .nk-about-highlight::before {
+        background-image: url(../img/banner-arrow-light.png);
+    }
+
+    .nk-about-highlight .number {
+        color: var(--white-f);
+    }
+
+    .nk-about-highlight .title {
+        color: var(--white-f);
+    }
+
+    .nk-about-info__title {
+        color: var(--white-f);
+    }
+
+    .nk-about-info__value {
+        color: #dbdbdb;
+    }
+
+    // service section
+    .nk-services {
+        background: #2d3446;
+    }
+
+    // experience section
+    .nk-experiences {
+        background-color: #32394c;
+    }
+
+    .nk-skill {
+        border-color: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 18px 24px 0px rgba(255, 255, 255, 0.04);
+    }
+
+    .nk-skill__title {
+        color: rgb(205 205 205);
+    }
+
+    .nk-skill__percent {
+        color: rgb(255 255 255);
+    }
+
+    .nk-infos__title {
+        color: var(--white-f);
+    }
+
+    .nk-infos__title::before {
+        background-image: url(../img/banner-vector-3.png);
+    }
+
+    .nk-info {
+        color: var(--white-f);
+    }
+
+    .nk-info__sub-title {
+        color: rgb(207 207 207);
+    }
+
+    // portfolio section
+    .nk-portfolio__filter-navs {
+        border-color: rgb(255 255 255 / 10%);
+
+        @include sm {
+            background: none;
+        }
+    }
+
+    .nk-portfolio__nav {
+        color: #dbdbdb;
+
+        @include sm {
+            border-color: rgb(255 255 255 / 10%);
+            background-color: rgba(255, 255, 255, 0.0651);
+        }
+    }
+
+    .nk-portfolio__nav.mixitup-control-active {
+        color: var(--white-f);
+    }
+
+    .nk-portfolio__title {
+        color: var(--white-f);
+    }
+
+    // testimonial section
+    .nk-testimonial {
+        background-image: url(../img/testimonial-bg-dark.jpg);
+    }
+
+    // pricing section
+    .nk-pricing {
+        background-color: #32394c;
+    }
+
+    .nk-pricing-pack__icon {
+        box-shadow: 5px 5px 0 var(--white-f);
+    }
+
+    .nk-pricing-pack__title {
+        color: var(--white-f);
+    }
+
+    .nk-pricing-pack__price {
+        color: var(--white-f);
+    }
+
+    .nk-pricing-pack {
+        border-color: var(--white-f);
+    }
+
+    .nk-pricing-pack__heading {
+        border-color: var(--white-f);
+    }
+
+    .nk-pricing-pack__features li {
+        color: #dbdbdb;
+    }
+
+    .nk-pricing-pack__tag {
+        background-color: var(--white-f);
+        color: var(--black);
+    }
+
+    .nk-pricing-pack-pop .nk-def-btn {
+        color: var(--black);
+        background-color: #7d662b;
+
+        &:hover {
+            color: var(--white-f);
+        }
+    }
+
+    // cta section
+    .nk-cta-top__img::before {
+        background-image: url(../img/cta-vector-stroke-dark.png);
+    }
+
+    .nk-cta-top__img::after {
+        background-image: url(../img/banner-vector-2-light.png);
+    }
+
+    .nk-nwsltr-form .nk-def-btn {
+        color: var(--black);
+
+        &:hover {
+            color: var(--white-f);
+        }
+    }
+
+    // blog section
+    .nk-blog {
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .nk-blog.swiper-slide-visible {
+        box-shadow: 0 18px 24px rgba(255, 255, 255, 0.04);
+    }
+
+    .nk-blog__infos {
+        color: #dbdbdb;
+    }
+
+    .nk-blog__infos a {
+        color: #dbdbdb;
+
+        &:hover {
+            color: var(--purple);
+        }
+    }
+
+    .nk-blog__descr {
+        color: #dbdbdb;
+    }
+
+    // contact section
+    .nk-contact-bg {
+        background-color: #32394c;
+    }
+
+    .nk-contact-bg::after {
+        background-image: url(../img/banner-arrow-light.png);
+    }
+
+    .nk-contact__form-area {
+        background: #212735;
+    }
+
+    .nk-contact-info__icon {
+        background-color: #32394c;
+    }
+
+    .nk-contact-info__title {
+        color: #dbdbdb;
+    }
+
+    .nk-contact-info__value {
+        color: var(--white-f);
+    }
+
+    .nk-contact-form input,
+    .nk-contact-form select,
+    .nk-contact-form textarea {
+        color: var(--white-f);
+        border-color: var(--white-f);
+
+        &:focus {
+            border-color: var(--purple);
+        }
+
+        &::placeholder {
+            color: rgb(255 255 255 / 50%);
+        }
+    }
+
+    //---- inner pages
+    // header section
+    .nk-inner-header {
+        background-color: #32394c;
+    }
+
+    // banner section
+    .nk-inner-banner {
+        background-color: #32394c;
+    }
+
+    .nk-breadcrumb a {
+        color: var(--white-f);
+
+        &:hover {
+            color: var(--purple);
+        }
+    }
+
+    // about page
+    .nk-about--inner {
+        background: none;
+    }
+
+    // services page
+    .nk-inner-service {
+        border-color: rgba(255, 255, 255, 0.102);
+
+        &:hover {
+            .nk-service__title {
+                color: var(--purple);
+            }
+
+            .nk-service__media .icon {
+                color: var(--purple);
+            }
+        }
+    }
+
+    .nk-inner-service .nk-service__title {
+        color: var(--white-f);
+    }
+
+    .nk-inner-service .nk-service__category {
+        color: #cfcfcf;
+    }
+
+    .nk-inner-service .nk-service__media .icon {
+        color: var(--white-f);
+    }
+
+    // service details page 
+    .nk-service-details-widget {
+        background-color: #32394c;
+    }
+
+    .nk-service-details-widget__title {
+        color: var(--white-f);
+    }
+
+    .nk-service-details__cta a {
+        color: var(--black);
+        background-color: transparent;
+
+        &:hover {
+            color: var(--white-f);
+        }
+    }
+
+    .nk-service-details__title {
+        color: var(--white-f);
+    }
+
+    .nk-service-details__descr {
+        color: #dbdbdb;
+    }
+
+    .nk-single-accordion-item.open {
+        background-color: #32394c;
+        color: var(--white-f);
+    }
+
+    .nk-single-accordion-item__body p {
+        color: #dbdbdb;
+    }
+
+    .nk-portfolio-details__infos {
+        background: #212735;
+    }
+
+    .nk-portfolio-details__bottom-nav a {
+        color: var(--white-f);
+
+        &:hover {
+            color: var(--purple);
+        }
+    }
+
+    .nk-blog-details__heading {
+        background-color: #32394c;
+    }
+
+    .nk-blog-details__infos {
+        color: #dbdbdb;
+    }
+
+    .nk-blog-details__info {
+        color: #dbdbdb;
+    }
+
+    .nk-blog-details__title {
+        color: var(--white-f);
+    }
+
+    .nk-blog-details-author .sub-title {
+        color: #dbdbdb;
+    }
+
+    .nk-blog-details__descr.blockquote {
+        background-color: #32394c;
+    }
+
+    .nk-blog-details__descr.blockquote p {
+        color: var(--white-f);
+    }
+
+    .nk-blog-details__descr.blockquote .blockquote__author-name {
+        color: var(--white-f);
+        text-decoration-color: var(--white-f);
+    }
+
+    .nk-blog-details-bottom-actions__title {
+        color: var(--white-f);
+    }
+
+    .nk-blog-details-share-options {
+        background-color: #32394c;
+    }
+
+    .nk-blog-details-share a {
+        color: var(--white-f);
+
+        &:hover {
+            color: var(--purple);
+        }
+    }
+
+    .nk-blog-details__post-tags .nk-blog-details-tag {
+        background-color: #32394c;
+        color: var(--white-f);
+
+        &:hover {
+            background-color: var(--purple);
+        }
+    }
+
+    .nk-comment-form-area {
+        background-color: #32394c;
+    }
+
+    .nk-comment-form__sub-title {
+        color: #dbdbdb;
+    }
+
+    .nk-comment-form input,
+    .nk-comment-form textarea {
+        border-color: rgb(255 255 255 / 20%);
+        color: var(--white-f);
+
+        &::placeholder {
+            color: rgb(255 255 255 / 60%);
+        }
+    }
+
+    .nk-blog-details-sidebar {
+        background-color: #32394c;
+    }
+
+    .nk-blog-details-widget__title {
+        color: var(--white-f);
+        border-color: rgb(255 255 255 / 10%);
+    }
+
+    .nk-blog-details-category {
+        color: #dbdbdb;
+
+        &:hover {
+            color: var(--purple);
+        }
+    }
+
+    .nk-blog-details-search form input {
+        border-color: rgba(255, 255, 255, 0.2);
+        color: var(--white-f);
+
+        &::placeholder {
+            color: rgb(255 255 255 / 60%);
+        }
+    }
+
+    .nk-recent-blog__date {
+        color: #dbdbdb;
+    }
+
+    .nk-recent-blog__title {
+        color: var(--white-f);
+    }
+
+    .nk-blog-details-tag {
+        color: var(--white-f);
+        border-color: rgb(255 255 255 / 10%);
+    }
+
+    // contacts page 
+    .nk-contact-page__form-area {
+        background: rgb(62 69 95 / 50%);
+    }
+}

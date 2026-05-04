@@ -1,0 +1,301 @@
+/* ----- PRICING ----- */
+.nk-pricing {
+    background-color: rgb(255 255 255 / 40%);
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 120px;
+        right: 150px;
+        background: url(../img/pricing-vector.png) no-repeat center center;
+        background-size: 100% 100%;
+        width: 103px;
+        height: 128px;
+        animation: scale 3s linear alternate infinite;
+
+        @include xxl {
+            right: 60px;
+        }
+
+        @include xl {
+            right: 20px;
+            top: 80px;
+        }
+
+        @include md {
+            right: -40px;
+            top: 50px;
+            width: 83px;
+            height: 108px;
+        }
+
+        @include xs {
+            width: 73px;
+            height: 98px;
+        }
+    }
+
+    @keyframes scale {
+        0% {
+            scale: 0.5;
+        }
+
+        100% {
+            scale: 1;
+        }
+    }
+
+    &-pack {
+        padding: 45px;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        border: solid rgb(18, 18, 18);
+        border-width: 0 1px;
+
+        &:not(.nk-pricing-pack--first, .nk-pricing-pack--last) {
+            border-width: 0;
+
+            @include md {
+                border-right-width: 1px;
+            }
+
+            @include xs {
+                border-left-width: 1px;
+            }
+        }
+
+        @include xl {
+            padding: 30px 45px;
+        }
+
+        @include lg {
+            padding: 25px 30px;
+        }
+
+        @include sm {
+            padding: 20px;
+        }
+
+        &__tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: rgb(48, 53, 58);
+            padding: 20px 5px 20px 4px;
+            writing-mode: vertical-lr;
+            scale: -1;
+            color: var(--white-f);
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 500;
+            z-index: -1;
+        }
+
+        &__heading {
+            border-bottom: 1px solid rgb(18, 18, 18);
+            margin-bottom: 37px;
+
+            @include xl {
+                margin-bottom: 27px;
+            }
+
+            @include lg {
+                margin-bottom: 22px;
+            }
+
+            @include sm {
+                margin-bottom: 17px;
+            }
+        }
+
+        &__icon {
+            width: 90px;
+            height: 90px;
+            background-color: var(--purple);
+            box-shadow: 5px 5px 0 rgb(18, 18, 18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            margin-bottom: 40px;
+
+            @include xl {
+                margin-bottom: 30px;
+            }
+
+            @include lg {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 25px;
+            }
+
+            @include sm {
+                width: 70px;
+                height: 70px;
+                margin-bottom: 20px;
+            }
+        }
+
+        &__title {
+            font-size: 30px;
+            color: rgb(18, 18, 18);
+            line-height: 1.333;
+            font-weight: 500;
+            margin-bottom: 32px;
+
+            @include xl {
+                margin-bottom: 27px;
+            }
+
+            @include lg {
+                margin-bottom: 20px;
+                font-size: 26px;
+            }
+
+            @include sm {
+                margin-bottom: 18px;
+                font-size: 24px;
+            }
+        }
+
+        &__price {
+            color: #121212;
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 37px;
+
+            @include xl {
+                margin-bottom: 27px;
+            }
+
+            @include lg {
+                margin-bottom: 22px;
+            }
+
+            @include sm {
+                margin-bottom: 17px;
+                font-size: 18px;
+            }
+
+            span.number {
+                font-weight: 500;
+                font-size: 72px;
+                color: rgb(134, 112, 239);
+                line-height: 0.556;
+
+                @include xl {
+                    font-size: 62px;
+                }
+
+                @include lg {
+                    font-size: 52px;
+                }
+
+                @include sm {
+                    font-size: 42px;
+                }
+
+                // @include xs {
+                //     font-size: 35px;
+                // }
+
+                // @include xxs {
+                //     font-size: 30px;
+                // }
+            }
+        }
+
+        &__features {
+            margin-bottom: 37px;
+
+            @include xl {
+                margin-bottom: 27px;
+            }
+
+            @include lg {
+                margin-bottom: 22px;
+            }
+
+            li {
+                position: relative;
+                padding-left: 18px;
+                font-size: 18px;
+                color: rgb(85, 85, 85);
+                line-height: 1.556;
+                font-weight: 400;
+
+                @include sm {
+                    font-size: 16px;
+                    padding-left: 16px;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 10px;
+                    border-radius: 50%;
+                    background-color: rgb(134, 112, 239);
+                    width: 8px;
+                    height: 8px;
+
+                    @include sm {
+                        width: 6px;
+                        height: 6px;
+                    }
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 14px;
+
+                    @include md {
+                        margin-bottom: 10px;
+                    }
+
+                    @include sm {
+                        margin-bottom: 8px;
+                    }
+                }
+
+                &.disabled-feature {
+                    opacity: 60%;
+
+                    &::before {
+                        background-color: gray;
+                    }
+                }
+            }
+        }
+
+        .nk-def-btn {
+            display: block;
+            text-align: center;
+
+            @include sm {
+                height: 50px;
+                line-height: 43px;
+                padding: 0 15px;
+                font-size: 14px;
+            }
+        }
+
+        &-pop {
+            .nk-pricing-pack__icon {
+                background-color: var(--golden);
+            }
+
+            .nk-def-btn {
+                background-color: #fffaec;
+                color: var(--black);
+                box-shadow: 0px 9px 12px rgb(252 217 102 / 30%);
+                border-color: var(--golden);
+
+                &::before {
+                    background-color: var(--golden);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,261 @@
+/* ----- EXPERIENCE ----- */
+
+.nk-experiences {
+    background-color: rgb(255 255 255 / 40%);
+
+    &-row {
+        --bs-gutter-x: 85px;
+
+        @include xl {
+            --bs-gutter-x: 50px;
+        }
+
+        @include lg {
+            --bs-gutter-x: 30px;
+        }
+
+        @include sm {
+            --bs-gutter-x: 20px;
+        }
+    }
+}
+
+.nk-skills {
+    margin-bottom: 97px;
+
+    @include xl {
+        margin-bottom: 57px;
+    }
+
+    @include md {
+        margin-bottom: 37px;
+    }
+}
+
+.nk-skill {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 18px 24px 0px rgba(0, 0, 0, 0.07);
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 25px 35px;
+
+    @include xl {
+        padding: 18px 25px;
+        gap: 15px;
+    }
+
+    @include lg {
+        padding: 12px 15px;
+        gap: 10px;
+    }
+
+    @include md {
+        padding: 17px 15px 7px;
+        flex-direction: column;
+        text-align: center;
+        gap: 6px;
+    }
+
+    @include xs {
+        padding: 12px 15px;
+        flex-direction: row;
+        text-align: left;
+        gap: 10px;
+    }
+
+    @include xxs {
+        padding: 12px 15px 4px;
+        flex-direction: column;
+        text-align: center;
+        gap: 6px;
+    }
+
+    &__img {
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        flex-shrink: 0;
+
+        @include xl {
+            width: 85px;
+            height: 85px;
+            padding: 15px;
+        }
+
+        @include lg {
+            width: 75px;
+            height: 75px;
+            padding: 10px;
+        }
+
+        @include md {
+            width: 70px;
+            height: 70px;
+            padding: 10px;
+        }
+
+        @include sm {
+            width: 65px;
+            height: 65px;
+        }
+
+        @include xs {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    &__title {
+        color: rgb(88, 88, 88);
+        margin-bottom: 11px;
+
+        @include xl {
+            margin-bottom: 0;
+        }
+
+        @include lg {
+            font-size: 18px;
+        }
+
+        @include md {
+            margin-bottom: 3px;
+        }
+    }
+
+    &__percent {
+        margin-bottom: 0;
+        font-size: 48px;
+        color: rgb(18, 18, 18);
+        line-height: 1.208;
+
+        @include xl {
+            font-size: 45px;
+        }
+
+        @include lg {
+            font-size: 40px;
+        }
+
+        @include md {
+            font-size: 35px;
+        }
+
+        @include sm {
+            font-size: 30px;
+        }
+    }
+}
+
+.nk-infos {
+    &__title {
+        color: rgb(18, 18, 18);
+        line-height: 1.944;
+        padding-left: 40px;
+        position: relative;
+        margin-bottom: 7px;
+
+        @include xl {
+            font-size: 32px;
+        }
+
+        @include lg {
+            font-size: 30px;
+            margin-bottom: 0;
+        }
+
+        @include md {
+            font-size: 28px;
+        }
+
+        @include sm {
+            font-size: 25px;
+            padding-left: 25px;
+        }
+
+        @include xs {
+            line-height: 1.5;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            translate: 0 -50%;
+            background: url(../img/banner-vector-2.png) no-repeat center center;
+            background-size: 100% 100%;
+            width: 25px;
+            height: 25px;
+            animation: spin 3.5s linear reverse infinite;
+
+            @include sm {
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+}
+
+.nk-info {
+    border: none;
+    color: rgb(18, 18, 18);
+    gap: 30px;
+    padding: 30px 35px;
+
+    @include lg {
+        gap: 25px;
+        padding: 20px 25px;
+    }
+
+    @include md {
+        row-gap: 0;
+    }
+
+    @include sm {
+        padding: 15px 20px;
+    }
+
+    &__timespan {
+        margin-bottom: 0;
+        line-height: 1.625;
+        font-weight: 400;
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 1.417;
+
+        @include lg {
+            font-size: 22px;
+            margin-bottom: 4px;
+        }
+
+        @include sm {
+            font-size: 20px;
+            margin-bottom: 2px;
+        }
+    }
+
+    &__sub-title {
+        font-size: 18px;
+        color: rgb(85, 85, 85);
+        line-height: 1.556;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 25px;
+
+        @include sm {
+            margin-bottom: 20px;
+        }
+    }
+}

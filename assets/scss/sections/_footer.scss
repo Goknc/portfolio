@@ -1,0 +1,90 @@
+/* ----- FOOTER ----- */
+.nk-footer {
+    background-color: var(--purple);
+    padding: 60px 0;
+    position: relative;
+
+    @include xl {
+        padding: 40px 0;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        background: no-repeat center center;
+        background-size: 100% 100%;
+        opacity: 0.5;
+    }
+
+    &::before {
+        background-image: url(../img/footer-vector-1.png);
+        width: 32px;
+        height: 40px;
+        bottom: 10px;
+        left: 90px;
+
+        @include xxl {
+            left: -10px;
+        }
+
+    }
+
+    &::after {
+        background-image: url(../img/footer-vector-2.png);
+        width: 24px;
+        height: 50px;
+        right: 100px;
+        bottom: 50px;
+
+        @include xxl {
+            right: -6px;
+        }
+
+        @include xs {
+            opacity: 0;
+        }
+    }
+
+    &__copyright-txt {
+        color: var(--white-f);
+    }
+
+    &__right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__nav a {
+        color: var(--white-f);
+        font-size: 18px;
+        line-height: 1.56;
+        font-weight: 300;
+
+        &:hover {
+            color: var(--golden);
+        }
+
+        &:first-child {
+            margin-right: 35px;
+        }
+    }
+}
+
+.nk-back-to-top {
+    background-color: var(--golden);
+    border-radius: 7px;
+    border: 1px solid var(--golden);
+    width: 40px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: var(--black);
+    font-size: 20px;
+
+    &:hover {
+        background-color: transparent;
+        color: var(--golden);
+    }
+}
